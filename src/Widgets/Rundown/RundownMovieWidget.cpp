@@ -611,10 +611,10 @@ void RundownMovieWidget::executeLoadPreview()
         const QSharedPointer<CasparDevice> device = DeviceManager::getInstance().getDeviceByName(this->model.getDeviceName());
         if (device != NULL && device->isConnected())
         {
-            device->loadMovie(deviceModel->getPreviewChannel(), this->command.getVideolayer(), this->command.getVideoName(),
-                              this->command.getTransition(), this->command.getTransitionDuration(), this->command.getTween(),
-                              this->command.getDirection(), this->command.getSeek(), this->command.getLength(),
-                              this->command.getLoop(), true, false);
+            device->playMovie(deviceModel->getPreviewChannel(), this->command.getVideolayer(), this->command.getVideoName(),
+                                            this->command.getTransition(), this->command.getTransitionDuration(), this->command.getTween(),
+                                            this->command.getDirection(), this->command.getSeek(), this->command.getLength(),
+                                            this->command.getLoop(), true);
         }
     }
 
@@ -628,10 +628,10 @@ void RundownMovieWidget::executeLoadPreview()
             const QSharedPointer<CasparDevice> deviceShadow = DeviceManager::getInstance().getDeviceByName(model.getName());
             if (deviceShadow != NULL && deviceShadow->isConnected())
             {
-                deviceShadow->loadMovie(model.getPreviewChannel(), this->command.getVideolayer(), this->command.getVideoName(),
-                                        this->command.getTransition(), this->command.getTransitionDuration(), this->command.getTween(),
-                                        this->command.getDirection(), this->command.getSeek(), this->command.getLength(),
-                                        this->command.getLoop(), true, false);
+                     deviceShadow->playMovie(model.getPreviewChannel(), this->command.getVideolayer(), this->command.getVideoName(),
+                                            this->command.getTransition(), this->command.getTransitionDuration(), this->command.getTween(),
+                                            this->command.getDirection(), this->command.getSeek(), this->command.getLength(),
+                                            this->command.getLoop(), true);
             }
         }
     }
