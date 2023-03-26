@@ -27,32 +27,6 @@
     <number>20</number>
    </property>
    <item row="0" column="0">
-    <widget class="QLabel" name="labelFlashlayerField">
-     <property name="text">
-      <string>Flash layer</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QSpinBox" name="spinBoxFlashlayer">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="maximum">
-      <number>99</number>
-     </property>
-     <property name="value">
-      <number>0</number>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
     <widget class="QLabel" name="labelInvoke">
      <property name="text">
       <string>Invoke</string>
@@ -62,10 +36,10 @@
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="0" column="1">
     <widget class="QLineEdit" name="lineEditInvoke"/>
    </item>
-   <item row="2" column="0">
+   <item row="1" column="0">
     <widget class="QLabel" name="labelUseStoredData">
      <property name="text">
       <string>Use stored data</string>
@@ -75,7 +49,7 @@
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="1" column="1">
     <layout class="QHBoxLayout" name="horizontalLayoutLoop">
      <item>
       <widget class="QCheckBox" name="checkBoxUseStoredData">
@@ -102,7 +76,7 @@
      </item>
     </layout>
    </item>
-   <item row="3" column="0">
+   <item row="2" column="0">
     <widget class="QLabel" name="labelUseUppercaseData">
      <property name="text">
       <string>Use uppercase data</string>
@@ -112,7 +86,7 @@
      </property>
     </widget>
    </item>
-   <item row="3" column="1">
+   <item row="2" column="1">
     <layout class="QHBoxLayout" name="horizontalLayoutLoop_2">
      <item>
       <widget class="QCheckBox" name="checkBoxUseUppercaseData">
@@ -139,7 +113,7 @@
      </item>
     </layout>
    </item>
-   <item row="4" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="labelTriggerOnNext">
      <property name="text">
       <string>Trigger on next</string>
@@ -149,7 +123,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="1">
+   <item row="3" column="1">
     <layout class="QHBoxLayout" name="horizontalLayoutTriggerOnNext">
      <item>
       <widget class="QCheckBox" name="checkBoxTriggerOnNext">
@@ -176,7 +150,7 @@
      </item>
     </layout>
    </item>
-   <item row="5" column="0">
+   <item row="4" column="0">
     <widget class="QLabel" name="labelSendAsJson">
      <property name="text">
       <string>Send as JSON</string>
@@ -186,7 +160,7 @@
      </property>
     </widget>
    </item>
-   <item row="5" column="1">
+   <item row="4" column="1">
     <layout class="QHBoxLayout" name="horizontalLayoutSendAsJson">
      <item>
       <widget class="QCheckBox" name="checkBoxSendAsJson">
@@ -213,7 +187,7 @@
      </item>
     </layout>
    </item>
-   <item row="6" column="0" colspan="2">
+   <item row="5" column="0" colspan="2">
     <layout class="QGridLayout" name="gridLayoutData">
      <item row="0" column="0">
       <spacer name="verticalSpacerDataTop">
@@ -344,7 +318,6 @@
   </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>spinBoxFlashlayer</tabstop>
   <tabstop>lineEditInvoke</tabstop>
   <tabstop>checkBoxUseStoredData</tabstop>
   <tabstop>checkBoxUseUppercaseData</tabstop>
@@ -356,22 +329,6 @@
  </tabstops>
  <resources/>
  <connections>
-  <connection>
-   <sender>spinBoxFlashlayer</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>InspectorTemplateWidget</receiver>
-   <slot>flashlayerChanged(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>201</x>
-     <y>29</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>48</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>toolButtonAddTemplateData</sender>
    <signal>clicked()</signal>

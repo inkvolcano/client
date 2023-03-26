@@ -45,7 +45,7 @@ RundownTemplateWidget::RundownTemplateWidget(const LibraryModel& model, QWidget*
     this->labelChannel->setText(QString("Channel: %1").arg(this->command.getChannel()));
     this->labelVideolayer->setText(QString("Video layer: %1").arg(this->command.getVideolayer()));
     this->labelDelay->setText(QString("Delay: %1").arg(this->command.getDelay()));
-    this->labelFlashlayer->setText(QString("Flash layer: %1").arg(this->command.getFlashlayer()));
+    //this->labelFlashlayer->setText(QString("Flash layer: %1").arg(this->command.getFlashlayer()));
     this->labelDevice->setText(QString("Server: %1").arg(this->model.getDeviceName()));
 
     QObject::connect(&this->itemScheduler, SIGNAL(executePlay()), this, SLOT(executePlay()));
@@ -757,7 +757,7 @@ void RundownTemplateWidget::delayChanged(int delay)
 
 void RundownTemplateWidget::flashlayerChanged(int flashlayer)
 {
-    this->labelFlashlayer->setText(QString("Flash layer: %1").arg(flashlayer));
+    //this->labelFlashlayer->setText(QString("Flash layer: %1").arg(flashlayer));
 }
 
 void RundownTemplateWidget::checkGpiConnection()

@@ -116,7 +116,7 @@ void InspectorTemplateWidget::rundownItemSelected(const RundownItemSelectedEvent
     {
         this->command = dynamic_cast<TemplateCommand*>(event.getCommand());
 
-        this->spinBoxFlashlayer->setValue(this->command->getFlashlayer());
+       // this->spinBoxFlashlayer->setValue(this->command->getFlashlayer());
         this->lineEditInvoke->setText(this->command->getInvoke());
         this->checkBoxUseStoredData->setChecked(this->command->getUseStoredData());
         this->checkBoxUseUppercaseData->setChecked(this->command->getUseUppercaseData());
@@ -144,7 +144,7 @@ void InspectorTemplateWidget::rundownItemSelected(const RundownItemSelectedEvent
 
 void InspectorTemplateWidget::blockAllSignals(bool block)
 {
-    this->spinBoxFlashlayer->blockSignals(block);
+   // this->spinBoxFlashlayer->blockSignals(block);
     this->lineEditInvoke->blockSignals(block);
     this->checkBoxUseStoredData->blockSignals(block);
     this->checkBoxUseUppercaseData->blockSignals(block);
@@ -277,7 +277,7 @@ void InspectorTemplateWidget::invokeChanged(QString invoke)
 
 void InspectorTemplateWidget::flashlayerChanged(int flashlayer)
 {
-    this->command->setFlashlayer(flashlayer);
+    //this->command->setFlashlayer(flashlayer);
 }
 
 void InspectorTemplateWidget::useStoredDataChanged(int state)
