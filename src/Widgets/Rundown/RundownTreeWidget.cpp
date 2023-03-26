@@ -176,18 +176,20 @@ void RundownTreeWidget::setupMenus()
     this->contextMenuColor = new QMenu(this);
     this->contextMenuColor->setTitle("Colorize Item");
     //this->contextMenuColor->setIcon(QIcon(":/Graphics/Images/Color.png"));
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/Chocolate.png"),*/ "Chocolate");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/DarkKhaki.png"),*/ "DarkKhaki");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/DarkSlateGray.png"),*/ "DarkSlateGray");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/Maroon.png"),*/ "Maroon");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/MaroonLight.png"),*/ "MaroonLight");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/OliveDrab.png"),*/ "OliveDrab");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/RoyalBlue.png"),*/ "RoyalBlue");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/SeaGreen.png"),*/ "SeaGreen");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/Sienna.png"),*/ "Sienna");
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/SteelBlue.png"),*/ "SteelBlue");
+	this->contextMenuColor->addAction("Red");
+	this->contextMenuColor->addAction("Orange");
+	this->contextMenuColor->addAction("Yellow");
+	this->contextMenuColor->addAction("Lime");
+	this->contextMenuColor->addAction("Green");
+	this->contextMenuColor->addAction("Light Green");
+	this->contextMenuColor->addAction("Teal");
+	this->contextMenuColor->addAction("Cyan");
+	this->contextMenuColor->addAction("Light Blue");
+	this->contextMenuColor->addAction("Blue");
+	this->contextMenuColor->addAction("Purple");
+	this->contextMenuColor->addAction("Pink");
     this->contextMenuColor->addSeparator();
-    this->contextMenuColor->addAction(/*QIcon(":/Graphics/Images/Color.png"),*/ "Reset");
+    this->contextMenuColor->addAction("Reset");
 
     foreach (QAction* action, this->contextMenuColor->actions())
     {
@@ -901,54 +903,61 @@ void RundownTreeWidget::contextMenuNewTriggered(QAction* action)
 {
     Q_UNUSED(action);
 }
-
 QString RundownTreeWidget::colorLookup(const QString& color, bool reverse) const
 {
     if (reverse)
     {
-        if (color == Color::SIENNA_COLOR)
-            return "Sienna";
-        else if (color == Color::OLIVEDRAB_COLOR)
-            return "OliveDrab";
-        else if (color == Color::SEAGREEN_COLOR)
-            return "SeaGreen";
-        else if (color == Color::CHOCOLATE_COLOR)
-            return "Chocolate";
-        else if (color == Color::DARKSLATEGRAY_COLOR)
-            return "DarkSlateGray";
-        else if (color == Color::STEELBLUE_COLOR)
-            return "SteelBlue";
-        else if (color == Color::MAROON_COLOR)
-            return "Maroon";
-        else if (color == Color::MAROONLIGHT_COLOR)
-            return "MaroonLight";
-        else if (color == Color::DARKKHAKI_COLOR)
-            return "DarkKhaki";
-        else if (color == Color::ROYALBLUE_COLOR)
-            return "RoyalBlue";
+        if (color == Color::RED_COLOR)
+            return "Red";
+		else if (color == Color::ORANGE_COLOR)
+            return "Orange";
+		else if (color == Color::YELLOW_COLOR)
+            return "Yellow";
+		else if (color == Color::LIME_COLOR)
+            return "Lime";
+		else if (color == Color::LIGHT_GREEN_COLOR)
+            return "Light Green";
+		 else if (color == Color::GREEN_COLOR)
+            return "Green";
+		else if (color == Color::TEAL_COLOR)
+            return "Teal";
+		else if (color == Color::CYAN_COLOR)
+            return "Cyan";
+		else if (color == Color::LIGHT_BLUE_COLOR)
+            return "Light Blue";
+		 else if (color == Color::BLUE_COLOR)
+            return "Blue";
+		else if (color == Color::PURPLE_COLOR)
+            return "Purple";
+        else if (color == Color::PINK_COLOR)
+            return "Pink";
     }
     else
     {
-        if (color == "Sienna")
-            return Color::SIENNA_COLOR;
-        else if (color == "OliveDrab")
-            return Color::OLIVEDRAB_COLOR;
-        else if (color == "SeaGreen")
-            return Color::SEAGREEN_COLOR;
-        else if (color == "Chocolate")
-            return Color::CHOCOLATE_COLOR;
-        else if (color == "DarkSlateGray")
-            return Color::DARKSLATEGRAY_COLOR;
-        else if (color == "SteelBlue")
-            return Color::STEELBLUE_COLOR;
-        else if (color == "Maroon")
-            return Color::MAROON_COLOR;
-        else if (color == "MaroonLight")
-            return Color::MAROONLIGHT_COLOR;
-        else if (color == "DarkKhaki")
-            return Color::DARKKHAKI_COLOR;
-        else if (color == "RoyalBlue")
-            return Color::ROYALBLUE_COLOR;
+        if (color == "Red")
+            return Color::RED_COLOR;
+		else if (color == "Orange")
+            return Color::ORANGE_COLOR;
+		else if (color == "Yellow")
+            return Color::YELLOW_COLOR;
+		 else if (color == "Lime")
+            return Color::LIME_COLOR;
+		 else if (color == "Light Green")
+            return Color::LIGHT_GREEN_COLOR;
+        else if (color == "Green")
+            return Color::GREEN_COLOR;
+	    else if (color == "Teal")
+            return Color::TEAL_COLOR;
+        else if (color == "Cyan")
+            return Color::CYAN_COLOR;
+		else if (color == "Light Blue")
+            return Color::LIGHT_BLUE_COLOR;
+        else if (color == "Blue")
+            return Color::BLUE_COLOR;
+		else if (color == "Purple")
+            return Color::PURPLE_COLOR;
+		else if (color == "Pink")
+            return Color::PINK_COLOR;
     }
 
     return ""; // Reset

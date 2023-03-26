@@ -186,16 +186,18 @@ namespace Color
     static const QString DEFAULT_SEPARATOR_COLOR = "Maroon";
     static const QString DEFAULT_STORED_DATA_COLOR = "Chocolate";
     static const QString DEFAULT_TRANSPARENT_COLOR = "Transparent";
-    static const QString SIENNA_COLOR = "rgba(136, 45, 23, 128)";
-    static const QString OLIVEDRAB_COLOR = "rgba(107, 142, 35, 128)";
-    static const QString SEAGREEN_COLOR = "rgba(46, 139, 87, 128)";
-    static const QString CHOCOLATE_COLOR = "rgba(123, 63, 0, 128)";
-    static const QString DARKSLATEGRAY_COLOR = "rgba(47, 79, 79, 128)";
-    static const QString STEELBLUE_COLOR = "rgba(70, 130, 179, 128)";
-    static const QString MAROON_COLOR = "rgba(128, 0, 0, 192)";
-    static const QString MAROONLIGHT_COLOR = "rgba(128, 0, 0, 64)";
-    static const QString DARKKHAKI_COLOR = "rgba(189, 183, 107, 64)";
-    static const QString ROYALBLUE_COLOR = "rgba(65, 105, 225, 64)";
+	static const QString RED_COLOR = "rgba(255, 0, 0, 128)";
+	static const QString ORANGE_COLOR = "rgba(255, 96, 0, 192)";
+	static const QString YELLOW_COLOR = "rgba(255, 218, 0, 192)";
+	static const QString LIME_COLOR = "rgba(255, 255, 0, 128)";
+	static const QString GREEN_COLOR = "rgba(101, 172, 54, 128)";
+	static const QString LIGHT_GREEN_COLOR = "rgba(100, 255, 0, 128)";
+	static const QString TEAL_COLOR = "rgba(0, 255, 101, 128)";
+	static const QString CYAN_COLOR = "rgba(0, 250, 255, 128)";
+	static const QString LIGHT_BLUE_COLOR = "rgba(0, 165, 255, 128)";
+	static const QString BLUE_COLOR = "rgba(0, 64, 255, 128)";
+	static const QString PURPLE_COLOR = "rgba(154, 0, 255, 128)";
+	static const QString PINK_COLOR = "rgba(223, 0, 255, 128)";
 }
 
 namespace Stylesheet
