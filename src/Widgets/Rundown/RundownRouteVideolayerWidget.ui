@@ -128,7 +128,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Server:</string>
+       <string></string>
       </property>
      </widget>
      <widget class="QLabel" name="labelDelay">

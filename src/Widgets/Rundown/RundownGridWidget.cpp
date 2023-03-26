@@ -41,7 +41,7 @@ RundownGridWidget::RundownGridWidget(const LibraryModel& model, QWidget* parent,
     this->labelChannel->setText(QString("Channel: %1").arg(this->command.getChannel()));
     this->labelVideolayer->setText(QString("Video layer: %1").arg(this->command.getVideolayer()));
     this->labelDelay->setText(QString("Delay: %1").arg(this->command.getDelay()));
-    this->labelDevice->setText(QString("Server: %1").arg(this->model.getDeviceName()));
+    this->labelDevice->setText(QString("%1").arg(this->model.getDeviceName()));
 
     QObject::connect(&this->itemScheduler, SIGNAL(executePlay()), this, SLOT(executePlay()));
 
@@ -104,7 +104,7 @@ void RundownGridWidget::deviceChanged(const DeviceChangedEvent& event)
 
         // Update the model with the new device.
         this->model.setDeviceName(event.getDeviceName());
-        this->labelDevice->setText(QString("Server: %1").arg(this->model.getDeviceName()));
+        this->labelDevice->setText(QString("%1").arg(this->model.getDeviceName()));
 
         // Connect connectionStateChanged() to the new device.
         const QSharedPointer<CasparDevice> newDevice = DeviceManager::getInstance().getDeviceByName(this->model.getDeviceName());

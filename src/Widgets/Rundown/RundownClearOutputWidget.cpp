@@ -38,7 +38,7 @@ RundownClearOutputWidget::RundownClearOutputWidget(const LibraryModel& model, QW
     this->labelLabel->setText(this->model.getLabel());
     this->labelChannel->setText(QString("Channel: %1").arg(this->command.getChannel()));
     this->labelDelay->setText(QString("Delay: %1").arg(this->command.getDelay()));
-    this->labelDevice->setText(QString("Server: %1").arg(this->model.getDeviceName()));
+    this->labelDevice->setText(QString("%1").arg(this->model.getDeviceName()));
 
     QObject::connect(&this->clearChannelScheduler, SIGNAL(executePlay()), this, SLOT(executeClearChannel()));
     QObject::connect(&this->clearVideoLayerScheduler, SIGNAL(executePlay()), this, SLOT(executeClearVideolayer()));
@@ -89,7 +89,7 @@ void RundownClearOutputWidget::deviceChanged(const DeviceChangedEvent& event)
 
         // Update the model with the new device.
         this->model.setDeviceName(event.getDeviceName());
-        this->labelDevice->setText(QString("Server: %1").arg(this->model.getDeviceName()));
+        this->labelDevice->setText(QString("%1").arg(this->model.getDeviceName()));
 
         // Connect connectionStateChanged() to the new device.
         const QSharedPointer<CasparDevice> newDevice = DeviceManager::getInstance().getDeviceByName(this->model.getDeviceName());
